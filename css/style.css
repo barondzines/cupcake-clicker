@@ -1,0 +1,292 @@
+p {
+    font-family: 'Indie Flower', cursive;
+}
+
+h1, h2, h3, h4, h5, h6{
+
+    font-family: 'Acme', sans-serif;
+    color:#fff;
+}
+
+body {
+    background: #232A43; /* Old browsers */
+    background: -moz-linear-gradient(top, #232A43 0%, #507FBF 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #232A43 0%,#507FBF 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #232A43 0%,#507FBF 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a6c60', endColorstr='#82b1a2',GradientType=0 ); /* IE6-9 */
+}
+
+.button{
+    background-color: rgb(19, 22, 32);
+    font-family: 'Acme', sans-serif;
+}
+
+.button:hover{
+    background-color: #272d40;
+}
+
+#game-content{
+
+}
+
+#game-content img{
+    width:400px;
+    height:auto;
+}
+
+#addon-button {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 3px;
+    background-color:#507fbf;
+    background-image: url(http://localhost:8888/Games/Money%20Clicker/images/button-shadow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#addon-button:hover{
+    cursor: pointer;
+}
+
+.top-bar{
+    background-color:#507fbf;
+    padding: 25px;
+    margin-bottom: 65px;
+}
+
+.footer {
+    background-color:#507fbf;
+    color:#fff;
+}
+
+.top-bar-left {
+    color: #fff;
+}
+
+#menu {
+    background-color: transparent;
+}
+
+#menu a{
+
+    color:#fff;
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+}
+
+/*********** Cupcake Side Classes *********/
+
+.cupcake-side{
+
+    position: relative;
+
+}
+
+.circle-image{
+
+    background-image: url(http://localhost:8888/Games/Money%20Clicker/images/circle.png);
+    height: 546px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 426px;
+    width: 100%;
+    position: absolute;
+
+}
+
+
+
+.cupcake-container{
+    position: relative;
+    width: auto;
+    height: 400px;
+}
+
+#cupcake-img{
+    position:absolute;
+    width:100%;
+    margin:auto 0;
+    height:400px;
+    transition: all .2s ease-in-out;
+}
+#cupcake-img:hover{
+    transform: scale(0.95);
+}
+
+#cupcake-img.grow{
+
+     transform: scale(1.03);
+}
+
+#money, #cupcake{
+
+    z-index: 100;
+}
+
+#cupcake:hover{
+    opacity:0.9;
+    cursor: pointer;
+}
+
+#money{
+    color:#fff;
+}
+
+
+/**** Addon Button Classes ******/
+
+
+
+
+.addons-block .cost{
+    color:#fff;
+    font-size:18px;
+}
+
+.no-money{
+ /*opacity:0.5;*/
+}
+
+/** this is the the big cupcake */
+
+.standard{
+    background-image: url("../images/cupcake.png");
+    height:380px;
+    width:auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bronze{
+
+    background-image: url(../images/cupcake-bronze.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 123px;
+
+}
+
+
+/******** shelves for cupcake icons ********/
+
+.shelf{
+
+    background-image: url(../images/shelf-repeat.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: 123px !important;
+}
+
+.shelf .cupcake-icon p{
+    text-align:center;
+    color:#fff;
+}
+
+/******** Cupcake Icon classes ********/
+
+
+.cupcake-icon:hover{
+    cursor: pointer;
+}
+
+/******** Start list of cupcakes *********/
+
+.display-shelf .cupcake-icon.shadow-cupcake{
+    background-image: url(../images/shadow-cupcake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 123px;
+}
+
+.display-shelf .shadow-cupcake:hover{
+    background-image: url(../images/shadow-cupcake-border.png);
+    cursor: pointer;
+}
+
+.display-shelf .cupcake-icon.standard{
+
+    background-image: url(../images/cupcake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 123px;
+
+}
+
+/******** Addon Block Styling *******/
+
+.add-on-container{
+    background-color: rgb(231, 238, 241);
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.cost {
+
+    background-color: #507FBF;
+    text-align: center;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.numberCount{
+    font-size: 32px;
+    font-weight: 600;
+    color:rgb(35, 42, 67);;
+}
+
+.name {
+    font-size: 28px;
+    padding-left: 15px;
+    color: rgb(35, 42, 67);
+    font-weight: 600;
+}
+
+.mps {
+     font-size: 18px;
+     padding-left: 15px;
+     color: rgb(35, 42, 67);
+     font-weight: 600;
+     margin-bottom:25px;
+}
+
+.persec{
+    font-size:14px;
+}
+
+.addons-block .button{
+    width:100%;
+}
+
+/****** Start the Icon List *******/
+
+.bakers-icon{
+    background-image: url(../images/bakers_hat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+.salesman-icon{
+    background-image: url(../images/salesman.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+
+.store-icon{
+    background-image: url(../images/store-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+}
+
+
+
