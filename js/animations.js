@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     var cupcake = '#cupcake-img';
+    var hideblock = '#addons-block';
 
         $(cupcake).click(function() {
 
@@ -15,6 +16,13 @@ $(document).ready(function(){
 
     });
 
-
+        /*
+    $(function() {
+        if (parseInt($("cost").text(), 10) <= parseInt($("moneyAmount").text(), 10)) {
+            $("add-on-container").removeClass("no-money");
+        } else if ($('add-on-container').not('no-money') && (parseInt($("cost").text(), 10) <= parseInt($("moneyAmount").text(), 10))) {
+            $("add-on-container").addClass("no-money");
+        }
+    });*/
 
 });

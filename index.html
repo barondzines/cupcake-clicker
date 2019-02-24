@@ -92,35 +92,62 @@
 
         <div class="cell addons-side">
 
-            <div class="grid-x grid-padding-x grid-margin-y">
+            <div class="grid-x grid-margin-y">
                 <h2>Upgrades</h2>
 
-                <div class="cell addons-block">
-                    <div class="grid-x grid-padding-x add-on-container no-money" >
-                        <div class="cell medium-5">
-                            <div class="grid-x">
-                                <div id="bakersicon" class="cell button-icon"></div>
-                                <div id="bakersaddonCost" class="cell cost"></div>
-                            </div>
-                        </div>
-                        <div class="cell medium-7">
-                            <div class="grid-x">
-                                <div id="bakersAddon" class="cell name">Name</div>
-                                <div class="cell">
-                                    <div class="grid-x large-up-2 small-up-2">
-                                        <div id="bakersaddMPS" class="cell mps"></div>
-                                        <div id="bakersMPS" class="cell mps"></div>
+                <div id="addons-block" class="cell addons-block">
+                    <div class="grid-x grid-margin-x add-on-container no-money" >
+
+                        <div class="cell medium-10">
+
+                            <div class="grid-x grid-padding-x add-on-details">
+
+                                <div class="cell medium-5">
+                                    <div class="grid-x">
+                                        <div id="bakersicon" class="cell button-icon"></div>
+                                        <div id="bakersaddonCost" class="cell cost"></div>
                                     </div>
                                 </div>
-                                <div class="cell text-center">
-                                    <button class="button" onclick="newBuyClick(bakers);">Buy One</button>
+
+                                <div class="cell medium-7">
+                                    <div class="grid-x">
+                                        <div id="bakersAddon" class="cell name">Name</div>
+                                        <div class="cell">
+                                            <div class="grid-x large-up-2 small-up-2">
+                                                <div id="bakersaddMPS" class="cell mps"></div>
+                                                <div id="bakersMPS" class="cell mps"></div>
+                                            </div>
+                                        </div>
+                                        <div class="cell text-center">
+                                            <button class="button" onclick="newBuyClick(bakers);">Buy One</button>
+                                        </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="cell addons-block">
+                        <div class="cell auto">
+                            <div class="grid-x grid-padding-x text-center lvl-details">
+                                <div class="cell lvl">
+                                    <span>Level</span>
+                                </div>
+                                <div class="cell lvl-nmb">
+                                    <span>1</span>
+                                </div>
+                                <div class="cell lvl-btn">
+                                    <button class="button" onclick="levelUp();">Level Up</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -145,7 +172,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -170,7 +197,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -195,7 +222,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -220,7 +247,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -245,7 +272,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -270,7 +297,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -295,7 +322,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -320,7 +347,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -345,7 +372,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -370,7 +397,7 @@
                     </div>
                 </div>
 
-                <div class="cell addons-block">
+                <div id="addons-block" class="cell addons-block hide">
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">

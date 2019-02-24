@@ -2,7 +2,7 @@ var moneyClicks = 0;
 
 var prestige = 0;
 
-function AddOn(classname, name, count, cost, MPS, increase, icon){
+function AddOn(classname, name, count, cost, MPS, increase, purchased, level, icon){
 
     this.classname = classname;
     this.name = name;
@@ -10,18 +10,21 @@ function AddOn(classname, name, count, cost, MPS, increase, icon){
     this.cost = cost;
     this.MPS = MPS;
     this.increase = increase;
+    this.purchased = purchased;
+    this.level = level;
     this.icon = icon;
+
+
 
     this.frontEndButton = function(){
 
         document.getElementById(this.classname+"Addon").innerHTML = "<span class='numberCount'>" + this.count + "</span>" + "<span class='name'>" + this.name + "</span>";
         document.getElementById(this.classname+"MPS").innerHTML = "<span class='persec'>Total</span> $" + this.count * this.MPS + "<span class='persec'> Per Sec</span>";
         document.getElementById(this.classname+"addMPS").innerHTML = "+ $" + this.MPS + "<span class='persec'> CPS </span>";
-        document.getElementById(this.classname+"addonCost").innerHTML = formatter.format(this.cost);
+        document.getElementById(this.classname+"addonCost").innerHTML = "$" + "<span class='inner-cost'>" + this.cost + "</span>" ;
         document.getElementById(this.classname+"icon").classList.add(this.icon+'-icon');
 
     }
-
 
 }
 
@@ -32,18 +35,18 @@ const formatter = new Intl.NumberFormat('en-US', {
 });
 
 
-let bakers       = new AddOn("bakers",      "Bakers",                0, 10, 1, 2, "bakers");
-let salesman     = new AddOn("salesman",    "Salesman",              0, 100, 2, 2, "salesman");
-let store        = new AddOn("store",       "Store",                 0, 1100, 5, 3, "store");
-let factory      = new AddOn("factory",     "Factory",               0, 12000, 10, 4, "bakers");
-let corporate    = new AddOn("corporate",   "Corporate Office",      0, 130000, 15, 5, "bakers");
-let research     = new AddOn("research",    "Research Facility",     0, 1400000, 20, 6, "bakers");
-let moonbase     = new AddOn("moonbase",    "Mooon Base",            0, 20000000, 50, 10, "bakers");
-let galactic     = new AddOn("galactic",    "Galactic Empire",       0, 330000000, 100, 10, "bakers");
-let space        = new AddOn("space",       "Space Station",         0, 51000000000, 200, 10, "bakers");
-let transporter  = new AddOn("transporter", "Transporter",           0, 75000000000, 300, 10, "bakers");
-let blackhole    = new AddOn("blackhole",   "Black Hole",            0, 1000000000000, 500, 10, "bakers");
-let timemachine  = new AddOn("timemachine", "Time Machine",          0, 14000000000000, 1000, 10, "bakers");
+let bakers       = new AddOn("bakers",      "Bakers",                0, 10, 1, 2, 0, 0, "bakers");
+let salesman     = new AddOn("salesman",    "Salesman",              0, 100, 2, 2, 0, 0, "salesman");
+let store        = new AddOn("store",       "Store",                 0, 1100, 5, 3, 0, 0, "store");
+let factory      = new AddOn("factory",     "Factory",               0, 12000, 10, 4, 0, 0, "bakers");
+let corporate    = new AddOn("corporate",   "Corporate Office",      0, 130000, 15, 5, 0, 0, "bakers");
+let research     = new AddOn("research",    "Research Facility",     0, 1400000, 20, 6, 0, 0, "bakers");
+let moonbase     = new AddOn("moonbase",    "Mooon Base",            0, 20000000, 50, 10, 0, 0, "bakers");
+let galactic     = new AddOn("galactic",    "Galactic Empire",       0, 330000000, 100, 10, 0, 0, "bakers");
+let space        = new AddOn("space",       "Space Station",         0, 51000000000, 200, 10, 0, 0, "bakers");
+let transporter  = new AddOn("transporter", "Transporter",           0, 75000000000, 300, 10, 0, 0, "bakers");
+let blackhole    = new AddOn("blackhole",   "Black Hole",            0, 1000000000000, 500, 10, 0, 0, "bakers");
+let timemachine  = new AddOn("timemachine", "Time Machine",          0, 14000000000000, 1000, 10, 0, 0, "bakers");
 
 function newBuyClick(AddOn){
 
@@ -91,6 +94,7 @@ let crystal  = new CupCake(1000000000000, "$1T", 9, "crystal", 0, 0);
 let marble   = new CupCake(14000000000000, "$14T", 10, "marble", 0, 0);
 let zombie   = new CupCake(20000000000000, "$20T", 11, "zombie", 0, 0);
 
+
 function buyCupcake(CupCake){
 
 
@@ -137,11 +141,36 @@ function cupCakeMPS(){
 
 }
 
+function buttonAvailable(){
+
+
+    var money = parseInt($('#inner-moneyAmount').text(), 10);
+    //var upgradecost = document.getElementById("cost");
+
+
+    $('.add-on-container').each(function(){
+
+       var upgradeCost = parseInt($(this).find(".inner-cost").text(), 10);
+
+
+      if(money >= upgradeCost){
+
+           $(this).removeClass('no-money');
+
+       } else{
+
+          $(this).addClass('no-money');
+
+      }
+
+    });
+
+}
 
 function moneyClicked() {
 
     moneyClicks++;
-    //buttonavailable();
+    buttonAvailable();
 
 }
 
@@ -153,11 +182,13 @@ var moneyProducerTimer = setInterval(function(){
     cupCakeMPS();
 
 
+
 }, 1000);
 
 var moneyClickerTimer = setInterval(function(){
 
     updateMoney();
+    buttonAvailable();
 
 
 }, 100);
@@ -191,7 +222,7 @@ function updateMoney() {
         zombie.lvl        * zombie.MPS;
 
     document.getElementById("moneyPerSecond").innerHTML     = "$" + moneyPerSecond + " per sec";
-    document.getElementById("moneyAmount").innerHTML        = formatter.format(moneyClicks);
+    document.getElementById("moneyAmount").innerHTML        = "$ " + "<span id='inner-moneyAmount'>" + moneyClicks + "</span>";
 
     bakers.frontEndButton();
     salesman.frontEndButton();
