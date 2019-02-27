@@ -5,24 +5,26 @@ p {
 h1, h2, h3, h4, h5, h6{
 
     font-family: 'Acme', sans-serif;
-    color:#fff;
+    color:#4f0006;
 }
 
 body {
-    background: #232A43; /* Old browsers */
-    background: -moz-linear-gradient(top, #232A43 0%, #507FBF 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #232A43 0%,#507FBF 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #232A43 0%,#507FBF 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a6c60', endColorstr='#82b1a2',GradientType=0 ); /* IE6-9 */
+
+    background-image:url("../images/assets/background-wallpaper.png");
+    /*background: #232A43;
+    background: -moz-linear-gradient(top, #232A43 0%, #f5b3cf 100%);
+    background: -webkit-linear-gradient(top, #232A43 0%,#f5b3cf 100%);
+    background: linear-gradient(to bottom, #232A43 0%,#f5b3cf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a6c60', endColorstr='#82b1a2',GradientType=0 ); */
 }
 
 .button{
-    background-color: rgb(19, 22, 32);
+    background-color: #f67cb7;
     font-family: 'Acme', sans-serif;
 }
 
-.button:hover{
-    background-color: #272d40;
+.button:hover, .button:focus{
+    background-color: #f5b3cf;
 }
 
 #game-content{
@@ -39,8 +41,8 @@ body {
     height: auto;
     border: 2px solid #000;
     border-radius: 3px;
-    background-color:#507fbf;
-    background-image: url(http://localhost:8888/Games/Money%20Clicker/images/button-shadow.png);
+    background-color:#f5b3cf;
+    background-image: url(../images/button-shadow.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -50,18 +52,18 @@ body {
 }
 
 .top-bar{
-    background-color:#507fbf;
+    background-color:#f5b3cf;
     padding: 25px;
     margin-bottom: 65px;
 }
 
 .footer {
-    background-color:#507fbf;
-    color:#fff;
+    background-color:#f5b3cf;
+    color:#4f0006;
 }
 
 .top-bar-left {
-    color: #fff;
+    color: #4f0006;
 }
 
 #menu {
@@ -70,7 +72,7 @@ body {
 
 #menu a{
 
-    color:#fff;
+    color:#4f0006;
     font-family: 'Acme', sans-serif;
     font-size: 20px;
 }
@@ -85,11 +87,11 @@ body {
 
 .circle-image{
 
-    background-image: url(http://localhost:8888/Games/Money%20Clicker/images/circle.png);
-    height: 546px;
+    background-image: url(../images/assets/sunburst.png);
+    height: 600px;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 426px;
+    background-size: cover;
     width: 100%;
     position: absolute;
 
@@ -129,18 +131,37 @@ body {
     cursor: pointer;
 }
 
-#money{
+#money .money h2, #money .mps h3{
+
     color:#fff;
 }
 
+#money .money{
+
+    background-image:url("../images/assets/ribbon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100px;
+
+}
+
+
+#money .mps{
+
+    background-image:url("../images/assets/ribbon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 72px;
+}
 
 /**** Addon Button Classes ******/
 
 
 
-
 .addons-block .cost{
-    color:#fff;
+    color:#4f0006;
     font-size:18px;
 }
 
@@ -181,7 +202,7 @@ body {
 
 .shelf .cupcake-icon p{
     text-align:center;
-    color:#fff;
+    color:#4f0006;
 }
 
 /******** Cupcake Icon classes ********/
@@ -218,15 +239,34 @@ body {
 
 /******** Addon Block Styling *******/
 
-.add-on-details, .lvl-details{
-    background-color: rgb(231, 238, 241);
-    border-radius: 3px;
+.addons-block{
+    position:relative;
+}
+
+.backgroundimage{
+    background-image: url(../images/assets/background-rect.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 108%;
+    width: 105%;
+    top: -9px;
+    right: -14px;
+    position:absolute;
+    border-radius:10px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    z-index: 0;
+}
+
+.add-on-container{
+    z-index: 100;
+    position: relative
+     /*background-color: rgb(231, 238, 241);*/
+    /* border-radius: 3px;*/
 }
 
 .cost {
 
-    background-color: #507FBF;
+    background-color: #f5b3cf;
     text-align: center;
     padding: 7px;
     border-radius: 4px;
@@ -235,20 +275,20 @@ body {
 .numberCount{
     font-size: 32px;
     font-weight: 600;
-    color:rgb(35, 42, 67);;
+    color: #4f0006;
 }
 
 .name {
     font-size: 28px;
     padding-left: 15px;
-    color: rgb(35, 42, 67);
+    color: #4f0006;
     font-weight: 600;
 }
 
 .mps {
      font-size: 16px;
      padding-left: 15px;
-     color: rgb(35, 42, 67);
+     color: #4f0006;
      font-weight: 600;
      margin-bottom:25px;
 }

@@ -28,6 +28,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/foundation.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </head>
@@ -46,13 +47,14 @@
 </div>
 
 <div id="game-content" class="grid-container">
+
     <div class="grid-x grid-margin-x large-up-2">
 
         <div class="cell cupcake-side">
             <div class="grid-x grid-margin-y">
                 <div id="money" class="cell text-center">
-                    <h2 id="moneyAmount"></h2>
-                    <h3 id="moneyPerSecond"> </h3>
+                   <div class="money"><h2 id="moneyAmount"></h2></div>
+                   <div class="mps"><h3 id="moneyPerSecond"> </h3></div>
                 </div>
                 <div id="cupcake" class="cell text-center " onclick="moneyClicked();">
                     <div class="cupcake-container">
@@ -93,61 +95,35 @@
         <div class="cell addons-side">
 
             <div class="grid-x grid-margin-y">
-                <h2>Upgrades</h2>
 
                 <div id="addons-block" class="cell addons-block">
-                    <div class="grid-x grid-margin-x add-on-container no-money" >
-
-                        <div class="cell medium-10">
-
-                            <div class="grid-x grid-padding-x add-on-details">
-
-                                <div class="cell medium-5">
-                                    <div class="grid-x">
-                                        <div id="bakersicon" class="cell button-icon"></div>
-                                        <div id="bakersaddonCost" class="cell cost"></div>
-                                    </div>
-                                </div>
-
-                                <div class="cell medium-7">
-                                    <div class="grid-x">
-                                        <div id="bakersAddon" class="cell name">Name</div>
-                                        <div class="cell">
-                                            <div class="grid-x large-up-2 small-up-2">
-                                                <div id="bakersaddMPS" class="cell mps"></div>
-                                                <div id="bakersMPS" class="cell mps"></div>
-                                            </div>
-                                        </div>
-                                        <div class="cell text-center">
-                                            <button class="button" onclick="newBuyClick(bakers);">Buy One</button>
-                                        </div>
-                                    </div>
-                                </div>
-
+                    <div class="backgroundimage"></div>
+                    <div class="grid-x grid-padding-x add-on-container no-money" >
+                        <div class="cell medium-5">
+                            <div class="grid-x">
+                                <div id="bakersicon" class="cell button-icon"></div>
+                                <div id="bakersaddonCost" class="cell cost"></div>
                             </div>
                         </div>
-
-                        <div class="cell auto">
-                            <div class="grid-x grid-padding-x text-center lvl-details">
-                                <div class="cell lvl">
-                                    <span>Level</span>
+                        <div class="cell medium-7">
+                            <div class="grid-x">
+                                <div id="bakersAddon" class="cell name">Name</div>
+                                <div class="cell">
+                                    <div class="grid-x large-up-2 small-up-2">
+                                        <div id="bakersaddMPS" class="cell mps"></div>
+                                        <div id="bakersMPS" class="cell mps"></div>
+                                    </div>
                                 </div>
-                                <div class="cell lvl-nmb">
-                                    <span>1</span>
-                                </div>
-                                <div class="cell lvl-btn">
-                                    <button class="button" onclick="levelUp();">Level Up</button>
+                                <div class="cell text-center">
+                                    <button class="button" onclick="newBuyClick(bakers);">Buy One</button>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-            </div>
 
-                <div id="addons-block" class="cell addons-block hide">
+                <div id="addons-block" class="cell addons-block">
+                    <div class="backgroundimage"></div>
                     <div class="grid-x grid-padding-x add-on-container no-money" >
                         <div class="cell medium-5">
                             <div class="grid-x">
@@ -183,7 +159,7 @@
                         <div class="cell medium-7">
                             <div class="grid-x">
                                 <div class="cell">
-                                <div id="storeAddon" class="cell name">Name</div>
+                                    <div id="storeAddon" class="cell name">Name</div>
                                     <div class="grid-x large-up-2 small-up-2">
                                         <div id="storeaddMPS" class="cell mps"></div>
                                         <div id="storeMPS" class="cell mps"></div>
@@ -208,7 +184,7 @@
                         <div class="cell medium-7">
                             <div class="grid-x">
                                 <div class="cell">
-                                <div id="factoryAddon" class="cell name">Name</div>
+                                    <div id="factoryAddon" class="cell name">Name</div>
                                     <div class="grid-x large-up-2 small-up-2">
                                         <div id="factoryaddMPS" class="cell mps"></div>
                                         <div id="factoryMPS" class="cell mps"></div>
@@ -233,7 +209,7 @@
                         <div class="cell medium-7">
                             <div class="grid-x">
                                 <div class="cell">
-                                <div id="corporateAddon" class="cell name">Name</div>
+                                    <div id="corporateAddon" class="cell name">Name</div>
                                     <div class="grid-x large-up-2 small-up-2">
                                         <div id="corporateaddMPS" class="cell mps"></div>
                                         <div id="corporateMPS" class="cell mps"></div>
@@ -421,7 +397,7 @@
                         </div>
                     </div>
                 </div>
-                
+            </div>
                 
             </div>
         </div>
