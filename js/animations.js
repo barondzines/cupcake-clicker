@@ -1,28 +1,48 @@
 $(document).ready(function(){
-    var cupcake = '#cupcake-img';
-    var hideblock = '#addons-block';
+    let bakeGood = '#building-img';
+    let hideblock = '#addons-block';
+    let countDiv = '#counting';
+    let buildingDiv = "#building-img";
 
-        $(cupcake).click(function() {
+        $(bakeGood).click(function() {
 
-            $(cupcake).addClass("grow");
+            $(bakeGood).addClass("grow");
 
-                $(cupcake).on('transitionend', function () {
-                    if ($(cupcake).hasClass("grow")) {
+                $(bakeGood).on('transitionend', function () {
+                    if ($(bakeGood).hasClass("grow")) {
 
-                        $(cupcake).removeClass("grow");
+                        $(bakeGood).removeClass("grow");
                     }
                 })
 
+        });
+
+    $.fn.digits = function(){
+        return this.each(function(){
+            $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+        })
+    };
+
+    $('.money-mask').digits();
+
+    $(document).foundation();
+
+    $(buildingDiv).click(function() {
+
+        $(countDiv).addClass("count-top");
+
+        $(countDiv).on('transitionend', function () {
+
+            if ($(countDiv).hasClass("count-top")) {
+
+                $(countDiv).removeClass("count-top");
+            }
+        })
+
     });
 
-    /*
-$(function() {
-    if (parseInt($("cost").text(), 10) <= parseInt($("moneyAmount").text(), 10)) {
-        $("add-on-container").removeClass("no-money");
-    } else if ($('add-on-container').not('no-money') && (parseInt($("cost").text(), 10) <= parseInt($("moneyAmount").text(), 10))) {
-        $("add-on-container").addClass("no-money");
-    }
-});*/
-    $(document).foundation();
+
 });
+
+
 

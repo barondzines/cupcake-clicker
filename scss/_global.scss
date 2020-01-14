@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6{
 
 body {
 
-    background-image:url("../images/assets/background-wallpaper.png");
+    background-image:url("./images/assets/background-wallpaper.png");
     /*background: #232A43;
     background: -moz-linear-gradient(top, #232A43 0%, #f5b3cf 100%);
     background: -webkit-linear-gradient(top, #232A43 0%,#f5b3cf 100%);
@@ -42,7 +42,7 @@ body {
     border: 2px solid #000;
     border-radius: 3px;
     background-color:#f5b3cf;
-    background-image: url(../images/button-shadow.png);
+    background-image: url(./images/button-shadow.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -79,15 +79,11 @@ body {
 
 /*********** Cupcake Side Classes *********/
 
-.bakeGood-side{
 
-    position: relative;
-
-}
 
 .circle-image{
 
-    background-image: url(../images/assets/sunburst.png);
+    background-image: url(./images/assets/sunburst.png);
     height: 600px;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -98,38 +94,11 @@ body {
 }
 
 
-
-.bakeGood-container{
-    position: relative;
-    width: auto;
-    height: 400px;
-}
-
-#bakeGood-img{
-    position:absolute;
-    width:100%;
-    margin:auto 0;
-    height:400px;
-    transition: all .2s ease-in-out;
-}
-#bakeGood-img:hover{
-    transform: scale(0.95);
-}
-
-#bakeGood-img.grow{
-
-     transform: scale(1.03);
-}
-
-#money, #bakeGood{
+#money, #building{
 
     z-index: 100;
 }
 
-#bakeGood:hover{
-    opacity:0.9;
-    cursor: pointer;
-}
 
 #money .money h2, #money .mps h3{
 
@@ -138,7 +107,7 @@ body {
 
 #money .money{
 
-    background-image:url("../images/assets/ribbon.png");
+    background-image:url("./images/assets/ribbon.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -149,7 +118,7 @@ body {
 
 #money .mps{
 
-    background-image:url("../images/assets/ribbon.png");
+    background-image:url("./images/assets/ribbon.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -166,35 +135,17 @@ body {
 }
 
 .no-money{
- opacity:0.5;
+    opacity:0.5;
 }
 
-/** this is the the big cupcake */
 
-.cupcake{
-    background-image: url("../images/cupcake.png");
-    height:380px;
-    width:auto;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.macaron{
-
-    background-image: url(../images/bakery-items/macaron.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 123px;
-
-}
 
 
 /******** shelves for cupcake icons ********/
 
 .shelf{
 
-    background-image: url(../images/shelf-repeat.png);
+    background-image: url(./images/shelf-repeat.png);
     background-size: contain;
     background-repeat: repeat-x;
     height: 123px !important;
@@ -212,31 +163,6 @@ body {
     cursor: pointer;
 }
 
-/******** Start list of cupcakes *********/
-
-.display-shelf .bakeGood-icon.shadow-cupcake{
-    background-image: url(../images/shadow-cupcake.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 123px;
-}
-
-.display-shelf .shadow-cupcake:hover{
-    background-image: url(../images/shadow-cupcake-border.png);
-    cursor: pointer;
-}
-
-.display-shelf .bakeGood-icon.cupcake{
-
-    background-image: url(../images/cupcake.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 123px;
-
-}
-
 /******** Addon Block Styling *******/
 
 .addons-block{
@@ -244,7 +170,7 @@ body {
 }
 
 .backgroundimage{
-    background-image: url(../images/assets/background-rect.png);
+    background-image: url(./images/assets/background-rect.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 108%;
@@ -260,7 +186,7 @@ body {
 .add-on-container{
     z-index: 100;
     position: relative
-     /*background-color: rgb(231, 238, 241);*/
+    /*background-color: rgb(231, 238, 241);*/
     /* border-radius: 3px;*/
 }
 
@@ -286,11 +212,11 @@ body {
 }
 
 .mps {
-     font-size: 16px;
-     padding-left: 15px;
-     color: #4f0006;
-     font-weight: 600;
-     margin-bottom:25px;
+    font-size: 16px;
+    padding-left: 15px;
+    color: #4f0006;
+    font-weight: 600;
+    margin-bottom:25px;
 }
 
 .persec{
@@ -309,7 +235,7 @@ body {
 /****** Start the Icon List *******/
 
 .bakers-icon{
-    background-image: url(../images/bakers_hat.png);
+    background-image: url(./images/bakers_hat.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -317,7 +243,7 @@ body {
 }
 
 .salesman-icon{
-    background-image: url(../images/salesman.png);
+    background-image: url(./images/salesman.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -326,7 +252,7 @@ body {
 
 
 .store-icon{
-    background-image: url(../images/store-icon.png);
+    background-image: url(./images/store-icon.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

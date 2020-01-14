@@ -1,0 +1,309 @@
+p {
+  font-family: 'Indie Flower', cursive; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Acme', sans-serif;
+  color: #4f0006; }
+
+body {
+  background-image: url("./images/assets/background-wallpaper.png");
+  /*background: #232A43;
+  background: -moz-linear-gradient(top, #232A43 0%, #f5b3cf 100%);
+  background: -webkit-linear-gradient(top, #232A43 0%,#f5b3cf 100%);
+  background: linear-gradient(to bottom, #232A43 0%,#f5b3cf 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a6c60', endColorstr='#82b1a2',GradientType=0 ); */ }
+
+.button {
+  background-color: #f67cb7;
+  font-family: 'Acme', sans-serif; }
+
+.button:hover, .button:focus {
+  background-color: #f5b3cf; }
+
+#game-content img {
+  width: 400px;
+  height: auto; }
+
+#addon-button {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 3px;
+  background-color: #f5b3cf;
+  background-image: url(./images/button-shadow.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+#addon-button:hover {
+  cursor: pointer; }
+
+.top-bar {
+  background-color: #f5b3cf;
+  padding: 25px;
+  margin-bottom: 65px; }
+
+.footer {
+  background-color: #f5b3cf;
+  color: #4f0006; }
+
+.top-bar-left {
+  color: #4f0006; }
+
+#menu {
+  background-color: transparent; }
+
+#menu a {
+  color: #4f0006;
+  font-family: 'Acme', sans-serif;
+  font-size: 20px; }
+
+/*********** Cupcake Side Classes *********/
+.circle-image {
+  background-image: url(./images/assets/sunburst.png);
+  height: 600px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute; }
+
+#money, #building {
+  z-index: 100; }
+
+#money .money h2, #money .mps h3 {
+  color: #fff; }
+
+#money .money {
+  background-image: url("./images/assets/ribbon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100px; }
+
+#money .mps {
+  background-image: url("./images/assets/ribbon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 72px; }
+
+/**** Addon Button Classes ******/
+.addons-block .cost {
+  color: #4f0006;
+  font-size: 18px; }
+
+.no-money {
+  opacity: 0.5; }
+
+/******** shelves for cupcake icons ********/
+.shelf {
+  background-image: url(./images/shelf-repeat.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 123px !important; }
+
+.shelf .bakeGood-icon p {
+  text-align: center;
+  color: #4f0006; }
+
+/******** Cupcake Icon classes ********/
+.bakeGood-icon:hover {
+  cursor: pointer; }
+
+/******** Addon Block Styling *******/
+.addons-block {
+  position: relative; }
+
+.backgroundimage {
+  background-image: url(./images/assets/background-rect.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 108%;
+  width: 105%;
+  top: -9px;
+  right: -14px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  z-index: 0; }
+
+.add-on-container {
+  z-index: 100;
+  position: relative; }
+
+.cost {
+  background-color: #f5b3cf;
+  text-align: center;
+  padding: 7px;
+  border-radius: 4px; }
+
+.numberCount {
+  font-size: 32px;
+  font-weight: 600;
+  color: #4f0006; }
+
+.name {
+  font-size: 28px;
+  padding-left: 15px;
+  color: #4f0006;
+  font-weight: 600; }
+
+.mps {
+  font-size: 16px;
+  padding-left: 15px;
+  color: #4f0006;
+  font-weight: 600;
+  margin-bottom: 25px; }
+
+.persec {
+  font-size: 12px; }
+
+.addons-block .button {
+  width: 100%; }
+
+.lvl-btn .button {
+  font-size: 10px; }
+
+/****** Start the Icon List *******/
+.bakers-icon {
+  background-image: url(./images/bakers_hat.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; }
+
+.salesman-icon {
+  background-image: url(./images/salesman.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; }
+
+.store-icon {
+  background-image: url(./images/store-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px; }
+
+.bakeGood-side {
+  position: relative; }
+
+.building .building-container {
+  height: 600px;
+  position: relative;
+  width: auto; }
+  .building .building-container #building-img {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+    height: 250px;
+    z-index: 100;
+    transition: all .2s ease-in-out; }
+    .building .building-container #building-img:hover {
+      opacity: 0.9;
+      cursor: pointer; }
+  .building .building-container .sky {
+    background-image: url(./images/Bakery/sky.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    z-index: 5; }
+  .building .building-container .cloud {
+    background-image: url(./images/Bakery/cloud.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    width: 30%;
+    position: absolute;
+    z-index: 5; }
+  .building .building-container .sun {
+    background-image: url(./images/Bakery/sun.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    z-index: 5; }
+  .building .building-container .count-number {
+    position: absolute;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    margin: auto 0;
+    top: 75%;
+    opacity: 0;
+    right: 50%;
+    z-index: 150; }
+    .building .building-container .count-number.count-top {
+      top: 50%;
+      opacity: 1;
+      transition: all .5s; }
+
+.bld-info {
+  background-color: #70B2CC;
+  border: 2px solid #9E005D;
+  z-index: 90;
+  color: #650B08;
+  padding: 10px;
+  position: relative; }
+  .bld-info .bld-button {
+    color: #fff;
+    text-align: center;
+    background-color: #F790BD;
+    width: 90px;
+    position: relative;
+    margin: 0 auto; }
+    .bld-info .bld-button:hover {
+      cursor: pointer; }
+  .bld-info .current-lvl {
+    float: left; }
+  .bld-info .nxt-lvl {
+    float: right; }
+
+#building-img:hover {
+  transform: scale(0.95); }
+
+#building-img.grow {
+  transform: scale(1.03); }
+
+/******** Start list of cupcakes *********/
+.display-shelf .bakeGood-icon.shadow-cupcake {
+  background-image: url(./images/shadow-cupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 123px; }
+
+.display-shelf .shadow-cupcake:hover {
+  background-image: url(./images/shadow-cupcake-border.png);
+  cursor: pointer; }
+
+.display-shelf .bakeGood-icon.cupcake {
+  background-image: url(./images/cupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 123px; }
+
+/** this is the the big Clickable items */
+.baseBuilding {
+  background-image: url(./images/Bakery/bakery-building.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.macaron {
+  background-image: url(./images/bakery-items/macaron.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 123px; }
+
+/*# sourceMappingURL=style.css.map */
