@@ -55,14 +55,15 @@ export default function Upgrades() {
 
     useEffect(() => {
         //Implementing the setInterval method
-        console.log("starting ")
-       var newTotalCupCakes = gameDataValues.totalCupcakes
        setInterval(() => {
+        console.log("setting interval")
         upgradeData.map((upgrade) => {
+            console.log('mapping data')
                 if (upgrade.isUnlocked == true && upgrade.count > 0)
                 {
+                    console.log("adding new stuff")
                     var newData: GameData = {
-                        totalCupcakes: newTotalCupCakes - upgrade.currentCost,
+                        totalCupcakes: gameDataValues.totalCupcakes + upgrade.currentCPS,
                         buildings: upgradeData 
                     }
                     saveGameData(newData)
