@@ -1,0 +1,26 @@
+{
+  "name": "cupcake-clicker",
+  "version": "1.0.0",
+  "description": "You can use the [editor on GitHub](https://github.com/barondzines/cupcake-clicker/edit/master/README.md) to maintain and preview the content for your website in Markdown files.",
+  "main": "index.html",
+  "scripts": {
+    "build": "postcss ./src/styles.css -o ./public/styles.css",
+    "watch": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch",
+    "prod": "NODE_ENV=production postcss ./src/styles.css -o ./public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barondzines/cupcake-clicker.git"
+  },
+  "author": "Baron Pollak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barondzines/cupcake-clicker/issues"
+  },
+  "homepage": "https://github.com/barondzines/cupcake-clicker#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.4"
+  }
+}

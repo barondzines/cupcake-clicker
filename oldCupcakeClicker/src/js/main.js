@@ -206,7 +206,6 @@ function buttonAvailable(){
 
 
 function moneyClicked() {
-
     moneyClicks++;
     buttonAvailable();
 
