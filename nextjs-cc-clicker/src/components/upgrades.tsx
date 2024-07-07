@@ -20,7 +20,7 @@ export default function Upgrades() {
     const { saveGameData, gameDataValues } = useContext(GameDataContext) as GameDataContextType;
 
     const [upgradeData, setUpgradeData] = useState<Upgrade[]>([
-        {upgradeName: "bakers", count: 1, initialCost: 10, currentCost: 10, isUnlocked:true, baseCPS: 1, currentCPS: 0,  icon:"bakers_hat.png" },
+        {upgradeName: "bakers", count: 0, initialCost: 10, currentCost: 10, isUnlocked:true, baseCPS: 1, currentCPS: 0,  icon:"bakers_hat.png" },
         {upgradeName: "salesman", count: 0, initialCost: 100, currentCost: 100, isUnlocked:false, baseCPS: 2, currentCPS: 0,  icon:"bakers_hat.png" },
         {upgradeName: "store",  count: 0, initialCost: 1100, currentCost: 1100, isUnlocked:false, baseCPS: 5, currentCPS: 0,  icon:"bakers_hat.png" },
         {upgradeName: "factory", count: 0, initialCost: 12000, currentCost: 12000, isUnlocked:false, baseCPS: 10, currentCPS: 0,  icon:"bakers_hat.png" },
@@ -61,7 +61,6 @@ export default function Upgrades() {
             console.log('mapping data')
                 if (upgrade.isUnlocked == true && upgrade.count > 0)
                 {
-                    console.log("adding new stuff")
                     var newData: GameData = {
                         totalCupcakes: gameDataValues.totalCupcakes + upgrade.currentCPS,
                         buildings: upgradeData 
