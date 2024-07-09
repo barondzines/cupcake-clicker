@@ -12,13 +12,13 @@ export default function CupcakeStore() {
     const createCupcake = () => {
         if (cupcakeButton.current !== null){
             var newData = {totalCupcakes: gameDataValues.totalCupcakes + 1}
-            saveGameData( newData)
+            saveGameData(newData)
         }
     }
 
     return (
         <div className="content-start mt-48 grid grid-flow-row gap-4">
-            <div className="text-2xl text-center align-middle m-auto">Total Cupcakes: {gameDataValues.totalCupcakes}</div>
+            <div className="text-2xl text-center align-middle m-auto">Total Cupcakes: {Math.round(gameDataValues.totalCupcakes * 100) / 100}</div>
             <button 
             type="button"
             ref={cupcakeButton}
