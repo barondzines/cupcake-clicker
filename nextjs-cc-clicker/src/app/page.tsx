@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="">
       <section className="pb-16 pt-20 sm:pb-20 md:pt-36 lg:py-32">
-        <div className="flex flex-row justify-around text-slate-700">
+        <div className="grid grid-cols-2 text-slate-700">
           <CupcakeStore />
           <Upgrades />
         </div>
